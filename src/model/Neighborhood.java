@@ -91,4 +91,12 @@ public class Neighborhood {
 
     }
 
+    public void remove(String address){
+
+        if(root.getAddress().equals(address)){
+            root = root;
+        }
+
+    }
+
 }
