@@ -136,16 +136,24 @@ public class Neighborhood {
 
                 }
 
+                if (current.getFather().getRight() == current) {
+                    current.getFather().setRight(null);
+
+                } else {
+                    current.getFather().setLeft(null);
+                }
+
                 current.setFather(toRemove.getFather());
                 current.setLeft(toRemove.getLeft());
                 current.setRight(toRemove.getRight());
                 current.getRight().setFather(current);
                 current.getLeft().setFather(current);
 
-                if (current.getFather().getRight() == current) {
-                    current.getFather().setRight(null);
+                if (toRemove.getFather().getRight() == toRemove) {
+                    current.getFather().setRight(current);
+
                 } else {
-                    current.getFather().setLeft(null);
+                    current.getFather().setLeft(current);
                 }
 
                 current = null;

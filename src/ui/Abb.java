@@ -18,7 +18,7 @@ public class Abb {
         myN.addHouse("e", 21832);
         myN.addHouse("g", 218234);
 
-        House s = myN.search("d");
+        House s = myN.search("g");
 
         System.out.println(s.getArea());
 
